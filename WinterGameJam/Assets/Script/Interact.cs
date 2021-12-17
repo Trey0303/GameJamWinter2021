@@ -29,9 +29,10 @@ public class Interact : MonoBehaviour
 
     //campfire
     private bool campfireInRange;//rangeCondition for update
-    public GameObject tmpCampfire; //selected campfire
+    private GameObject tmpCampfire; //selected campfire
     public float IncreaseAmount = 4;
-    
+    public float maxLightRange = 60;
+
 
 
     // Start is called before the first frame update
@@ -85,14 +86,14 @@ public class Interact : MonoBehaviour
                 else//increase light range
                 {
                     //tmpLightSelected = tmpLightSelected.range + 1;
-                    if (tmpLightSelected.range < 7f)
+                    if (tmpLightSelected.range < maxLightRange)
                     {
                         tmpLightSelected.range = tmpLightSelected.range + IncreaseAmount;//increase light range
 
                     }
-                    if(tmpLightSelected.range > 7f)//if light range is at max
+                    if(tmpLightSelected.range > maxLightRange)//if light range is at max
                     {
-                        tmpLightSelected.range = 7f;
+                        tmpLightSelected.range = maxLightRange;
                     }
                 }
                 campfire.curFireOn = tmpLightSelected.enabled;//checks if current fire is on
