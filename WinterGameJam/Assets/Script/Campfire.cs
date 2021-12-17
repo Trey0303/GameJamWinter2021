@@ -56,7 +56,7 @@ public class Campfire : MonoBehaviour
 
         if(thisCollider.radius != campfireLight.range)//updates sphere collider range
         {
-            thisCollider.radius = campfireLight.range;
+            thisCollider.radius = campfireLight.range / 2;
         }
 
         //Light tmpLightSelected = curfire.tmpCampfire.GetComponent<Light>();
