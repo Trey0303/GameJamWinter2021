@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3182924794091023858}
   - component: {fileID: 3182924794091023857}
+  - component: {fileID: 1740551611}
+  - component: {fileID: 1740551612}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: SanityRadius (Default)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +46,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
   m_Intensity: 8.48
-  m_Range: 14.7
+  m_Range: 4.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -93,6 +95,36 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!135 &1740551611
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3182924794091023856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1740551612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3182924794091023856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54ba50e9b818e4418d5a9d364d14f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sanityVal: {fileID: 0}
+  campfireLight: {fileID: 0}
+  thisCollider: {fileID: 0}
+  player: {fileID: 0}
+  sphereRange: {x: 0, y: 0, z: 0}
 --- !u!1 &3182924795345338399
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +137,7 @@ GameObject:
   - component: {fileID: 3182924795345338386}
   - component: {fileID: 3182924795345338385}
   - component: {fileID: 3182924795345338384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Campfire
   m_TagString: Campfire
   m_Icon: {fileID: 0}
